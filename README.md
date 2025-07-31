@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+# 💬 WhatsApp Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured real-time chat application that mimics WhatsApp UI and UX, built with modern web technologies including **React**, **Redux**, **Tailwind CSS**, **Node.js**, **Socket.IO**, and **SQL**.
 
-Currently, two official plugins are available:
+![Preview](https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚡ Real-Time Messaging via **Socket.IO**
+- 🧠 State Management with **React Context API** + **Redux**
+- 💅 Beautiful UI with **Tailwind CSS** + Smooth **Animations**
+- 🔒 User Authentication (Sign in / Sign up)
+- 💬 Individual & Group Chats
+- 📱 Responsive Design (Mobile & Desktop)
+- 🔔 Live Notifications (Typing, New Message)
+- 😀 Emoji Support + Icons using **react-icons**
+- 💾 Backend built with **Node.js**, **Express**, **SQL**
+- 🛠️ Highly maintainable project structure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Frontend:
+- React.js
+- Tailwind CSS
+- React Router
+- React Icons
+- React Hooks & Context
+- Redux Toolkit
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend:
+- Node.js
+- Express.js
+- SQL (PostgreSQL or MySQL)
+- Socket.IO
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📸 Screenshots
+
+| Chat UI | Dark Mode | Emoji Picker |
+|--------|-----------|--------------|
+| ![Chat UI](https://media.giphy.com/media/26gssIytJvy1b1THO/giphy.gif) | ![Dark Mode](https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif) | ![Emoji Picker](https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif) |
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/whatsapp-clone.git
+cd whatsapp-clone
