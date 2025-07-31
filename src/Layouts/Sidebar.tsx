@@ -1,17 +1,12 @@
 import { CiSettings } from "react-icons/ci";
-import { Icons } from "../Constants/Icons";
+
+import Icons_Render from "../Components/Icons";
 
 export const Sidebar = () => {
   return (
     <>
       <div className="bg-[#1d1f1f] border-r-[0.1px] border-[#3d3d3d] w-fit h-[100vh] flex flex-col justify-between p-4">
-        <div className="flex flex-col gap-3">
-          {Icons?.map((el, index: number) => (
-            <div key={index}>
-              <i>{el.icon}</i>
-            </div>
-          ))}
-        </div>
+        <Icons_Render />
 
         <div>
           <div className="flex flex-col items-center justify-center gap-3">
