@@ -1,9 +1,9 @@
-import { Sidebar } from "./Layouts/Sidebar";
+import SplitLayout from "./Layouts/SplitLayout";
 
 const App = () => {
   return (
     <>
-      <Sidebar />
+      <SplitLayout />
     </>
   );
 };
