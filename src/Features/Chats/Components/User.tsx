@@ -2,6 +2,8 @@ import useGetUsers from "../Hooks/useGetusers";
 
 const User = () => {
   const { Users } = useGetUsers();
+  console.log(Users);
+
   return (
     <>
       {Users?.map((el, index: number) => (
