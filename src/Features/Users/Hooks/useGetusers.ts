@@ -9,16 +9,30 @@ const useGetUsers = () => {
       user_id: string;
     }[]
   >([]);
-  const [UserById, setUserById] = useState<{
-    id: string;
-    userName: string;
-  } | null>(null);
+  const [UserById, setUserById] = useState<
+    | {
+        id: string;
+        userName: string;
+        user_id: string;
+      }[]
+    | null
+  >(null);
 
   useEffect(() => {
-    socket.on("get-sockets", (data) => {
-      setUsers(data);
+    socket.emit("get-sockets");
+
+    socket.on("get-sockets", (data: any) => {
+      const users = Array.isArray(data)
+        ? data.filter((el) => el.user_id !== socket.id)
+        : [];
+
+      setUsers(users);
     });
-  }, [Users]);
+
+    return () => {
+      socket.off("get-sockets");
+    };
+  }, []);
 
   const handleClickUser = (el: {
     id: string;
