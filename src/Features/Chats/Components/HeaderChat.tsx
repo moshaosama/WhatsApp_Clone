@@ -1,7 +1,10 @@
 import { HiMiniEllipsisVertical } from "react-icons/hi2";
 import { IoSearch } from "react-icons/io5";
+import useGetUsers from "../../Users/Hooks/useGetusers";
 
 const HeaderChat = () => {
+  const { UserById } = useGetUsers();
+
   return (
     <>
       <div className="bg-[#141414] flex justify-between items-center text-white w-[80pc] p-4">
@@ -11,7 +14,7 @@ const HeaderChat = () => {
             alt="userImg.png"
             className="w-12 rounded-full h-12 object-cover"
           />
-          <h1 className="font-bold">Mosha</h1>
+          <h1 className="font-bold">{UserById?.[0]?.userName}</h1>
         </div>
 
         <div className="flex gap-6">
