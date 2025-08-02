@@ -1,3 +1,5 @@
+import { IoSend } from "react-icons/io5";
+
 const Chat = () => {
   return (
     <>
@@ -13,6 +15,12 @@ const Chat = () => {
             type="text"
             className="bg-[#303030] px-2 text-white w-full py-3 rounded-full"
           />
+
+          <p className="absolute bottom-2 right-3">
+            <button className="bg-green-500 hover:bg-green-800 transition-all duration-300 cursor-pointer p-[10px] rounded-full ">
+              <IoSend color="white" />
+            </button>
+          </p>
         </form>
       </div>
     </>
