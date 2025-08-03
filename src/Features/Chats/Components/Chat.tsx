@@ -6,8 +6,6 @@ const Chat = () => {
   const { handleSendMessage, handleSubmit, register, Message, sendMessage } =
     useSendMessage();
 
-  console.log(Message, sendMessage);
-
   return (
     <>
       <div className="relative">
