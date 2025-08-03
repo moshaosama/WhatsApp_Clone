@@ -1,4 +1,6 @@
 import DownloadApp from "../../Components/DownloadApp";
+import OpenAddContactModelProvider from "../../Context/useOpenAddContactModel";
+import AddContactModel from "../../Features/AddContact/Components/AddContactModel";
 import Chat from "../../Features/Chats/Components/Chat";
 import HeaderChat from "../../Features/Chats/Components/HeaderChat";
 import Header from "../../Features/Users/Components/Header";
@@ -10,10 +12,13 @@ const Home = () => {
   return (
     <>
       <div className="flex w-full">
-        <div className="bg-[#141414] text-white border-r-[0.5px] w-[35pc] p-4 border-[#3d3d3d]">
-          <Header />
-          <User />
-        </div>
+        <OpenAddContactModelProvider>
+          <div className="bg-[#141414] text-white border-r-[0.5px] w-[35pc] p-4 relative border-[#3d3d3d]">
+            <Header />
+            <User />
+            <AddContactModel />
+          </div>
+        </OpenAddContactModelProvider>
 
         {UserById === null ? (
           <DownloadApp />
