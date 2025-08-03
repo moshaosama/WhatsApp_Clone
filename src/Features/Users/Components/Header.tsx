@@ -1,18 +1,23 @@
 import { CiSearch } from "react-icons/ci";
 import { HiMiniEllipsisVertical } from "react-icons/hi2";
 import { IoAddCircleOutline } from "react-icons/io5";
+import { useOpenAddContactModelContext } from "../../../Context/useOpenAddContactModel";
 
 const Header = () => {
+  const { handleTriggerOpen } = useOpenAddContactModelContext();
   return (
     <>
       <div>
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">Mo4aAPP</h1>
           <div className="flex items-center gap-5">
-            <i>
+            <i
+              className="p-2 rounded-full hover:bg-[#363636] cursor-pointer"
+              onClick={handleTriggerOpen}
+            >
               <IoAddCircleOutline size={30} />
             </i>
-            <i>
+            <i className="p-2 rounded-full hover:bg-[#363636] cursor-pointer">
               <HiMiniEllipsisVertical size={25} />
             </i>
           </div>
